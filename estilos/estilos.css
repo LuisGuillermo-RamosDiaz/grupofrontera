@@ -4,7 +4,7 @@
 }
 
 :root {
-  --font: Montserrat;
+  --font: 'Montserrat', sans-serif;
   --color-principal: #4C0017;
   --color-blanco: #FFFFFF;
   --color-negro: #000000;
@@ -262,7 +262,6 @@ body{
 .division-discografia h2{
     color: var(--color-blanco);
     font-size: 1.25rem;
-    min-height: 3rem;
 }
 
 .division-discografia p{

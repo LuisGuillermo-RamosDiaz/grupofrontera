@@ -17,7 +17,7 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    /*outline: 1px solid red;*/
+    /**/outline: 1px solid red;/**/
 }
 
 body{
@@ -111,6 +111,13 @@ body{
     min-height: 3rem;
 }
 
+.subtitulo-integrantes{
+    text-align: left;
+    padding: 20px 0 0 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
 .imagen-1-index{
   width: 100%;
   height: auto;
@@ -199,28 +206,41 @@ body{
 }
 
 .imagen-integrantes{
-    display: block;
     margin: 0;
     height: 180px;
+    width: 75%;
     background-color: var(--color-principal);
     border-radius: 15px;
+    align-self: center;
+}
+
+.contenedor-1-integrantes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.contenedor-2-integrantes{
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .cuadro-integrantes{
     background-color: var(--color-principal);
-    display: inline-block;
     color: white;
     padding: 10px;
     border-radius: 10px;
+    min-width: 270px;
+    max-width: 270px;
 }
 
-.nombre-integrantes{
+.nombre-integrante{
     font-weight: 700;
     font-size: 20px;
 }
 
-.rol-integrantes{
-    letter-spacing: 0.2rem;
+.rol-integrante{
+    letter-spacing: 0.1rem;
     font-size: 15px;
     font-weight: 200;
 }
@@ -240,7 +260,6 @@ body{
     background-color: var(--color-principal);
     max-width: 800px;
     padding: 1rem;
-    
 }
 
 .imagen-discografia{
@@ -250,6 +269,7 @@ body{
 
 .caja-discografia{
     display: flex;
+
 }
 
 .division-discografia {
@@ -292,7 +312,7 @@ body{
 .titulo-disco h1{
     display: inline-block;
     background-color: var(--color-principal);
-    color: white;
+    color: var(--color-blanco);
     border-radius: 10px;
     padding: 0.5rem;
     margin: 1.5rem 0;
@@ -353,10 +373,6 @@ body{
     }
     #menu:checked + label + .barra-navegacion {
       display: flex;
-    }
-
-    .imagen-1-index {
-        transform: scale(1.25);
     }
 }
 

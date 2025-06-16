@@ -17,7 +17,7 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    outline: 2px solid red;
+    /*outline: 1px solid red;*/
 }
 
 body{
@@ -69,10 +69,11 @@ body{
 
 .menu .barra-navegacion ul li a{
     font-size: 18px;
+    text-align: left;
     padding: 10px 20px;
     color: #FFFFFF;
     display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;/*X*/
     border-radius: 6px;
 }
 
@@ -100,6 +101,21 @@ body{
     font-size: 40px;
 }
 
+.subtitulo{
+    color: var(--color-blanco);
+    font-size: 1.25rem;
+    min-height: 3rem;
+}
+
+.subtitulo-2{
+    color: var(--color-negro);
+    font-weight: 700;
+    text-align: center;
+    margin: 1.5rem;
+    font-size: 2.5rem;
+    min-height: 3rem;
+}
+
 .imagen-1-index{
   width: 100%;
   height: auto;
@@ -108,22 +124,40 @@ body{
 }
 
 .imagen-2-index{
-    max-width: 300px;
-    height: auto;
-    object-fit: cover;
+    max-height: 300px;
+    max-width: 30%;
     outline: 3px solid var(--color-blanco);
 }
 
 .contenedor-1-index{
     background-color: var(--color-principal);
     color: var(--color-blanco);
-    padding: 20px 50px 20px 50px;
+    padding: 3rem 2rem;
 }
 
 .contenedor-2-index{
     display: flex;
-    padding: 20px;
-    align-items: stretch;
+    padding: 0.75rem;
+}
+
+.contenedor-3-index{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 1.5rem;
+}
+
+.contenedor-4-index{
+    display: flex;
+    justify-content: right;
+    padding: 0.5rem 3rem 0.5rem 0;
+    gap: 1.5rem;
+    background-color: var(--color-principal);
+}
+
+.contenedor-4-index img{
+    height: 50px;
 }
 
 .wrapper-index{
@@ -141,10 +175,27 @@ body{
     letter-spacing: 0.5px;
 }
 
+.contenedor-3-index a{
+    display: inline-block;
+    padding: 5px;
+    height: 80px;
+    line-height: 70px;
+    width: 250px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: var(--color-principal);
+    box-shadow: 0 0.25rem 0.5rem var(--color-negro);
+}
+
+.contenedor-3-index a img{
+    height: 50px;
+    vertical-align: middle;
+    width: 175px;
+}
+
 .imagen-integrantes{
     display: block;
     margin: 0;
-    width: 200px;
     background-color: var(--color-principal);
     border-radius: 15px;
 }
@@ -201,13 +252,6 @@ body{
     padding-left: 1rem;
 }
 
-
-.subtitulo{
-    color: var(--color-blanco);
-    font-size: 1.25em;
-    min-height: 3rem;
-}
-
 .tipo-discografia{
     color: var(--color-blanco);
     
@@ -251,11 +295,48 @@ body{
         margin-top: 10px;
     }
 
+    .texto-index{
+        font-size: 0.8rem;
+    }
     #menu:checked + label + .barra-navegacion {
       display: flex;
     }
 
-    .imagen-index {
-        transform: scale(1.5); /* 5% de zoom hacia adentro */
+    .imagen-1-index {
+        transform: scale(1.25);
+    }
+}
+
+@media(max-width: 700px){
+    .titulo, .subtitulo-2{
+        font-size: 2rem;
+    }
+
+    .contenedor-3-index{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-4-index{
+        padding-right: 2rem;
+        gap: 0.5rem;
+    }
+
+    .contenedor-2-index{
+        display: block;
+        padding: 0;
+    }
+
+    .imagen-2-index{
+        display: block; /*No puedo usar flex aqui pq el container que lo contiene esta en block*/
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto 1rem auto;
+        max-width: 35%;
+    }
+
+    .wrapper-index{
+        margin-left: 0;
     }
 }

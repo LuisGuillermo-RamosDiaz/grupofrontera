@@ -73,8 +73,8 @@ body{
     padding: 10px 20px;
     color: #FFFFFF;
     display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;/*X*/
-    border-radius: 6px;
+    transition: background-color 0.4s ease;
+    border-radius: 5px;
 }
 
 .menu .barra-navegacion ul li a:hover{
@@ -99,12 +99,7 @@ body{
     display: flex;
     justify-content: center;
     font-size: 40px;
-}
-
-.subtitulo{
-    color: var(--color-blanco);
-    font-size: 1.25rem;
-    min-height: 3rem;
+    margin: 1rem 0 1rem 0;
 }
 
 .subtitulo-2{
@@ -158,6 +153,11 @@ body{
 
 .contenedor-4-index img{
     height: 50px;
+    transition: transform 0.2s;
+}
+
+.contenedor-4-index img:hover{
+    transform: scale(0.8);
 }
 
 .wrapper-index{
@@ -180,11 +180,16 @@ body{
     padding: 5px;
     height: 80px;
     line-height: 70px;
-    width: 250px;
+    width: 220px;
     border-radius: 15px;
     text-align: center;
     background-color: var(--color-principal);
     box-shadow: 0 0.25rem 0.5rem var(--color-negro);
+    transition: transform 0.2s;
+}
+
+.contenedor-3-index a:hover{
+    transform: translateX(10px);
 }
 
 .contenedor-3-index a img{
@@ -196,6 +201,7 @@ body{
 .imagen-integrantes{
     display: block;
     margin: 0;
+    height: 180px;
     background-color: var(--color-principal);
     border-radius: 15px;
 }
@@ -222,6 +228,8 @@ body{
 .tarjetas-discografia{
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem;
     justify-content: center;
 }
 
@@ -231,7 +239,6 @@ body{
     height: auto;
     background-color: var(--color-principal);
     max-width: 800px;
-    margin: 2rem 2rem 0rem 0rem;
     padding: 1rem;
     
 }
@@ -249,15 +256,21 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
 }
 
-.tipo-discografia{
+.division-discografia h2{
     color: var(--color-blanco);
-    
+    font-size: 1.25rem;
+    min-height: 3rem;
 }
 
-.boton-discografia{
+.division-discografia p{
+    color: var(--color-blanco);
+    font-weight: 350;
+}
+
+.division-discografia a{
     background-color: var(--color-blanco);
     border-radius: 10px;
     color: var(--color-negro);
@@ -266,8 +279,49 @@ body{
     text-decoration: none;
     align-self: flex-end;
     margin-top: 6rem;
+    transition: opacity 0.3s ease;
 }
 
+.division-discografia a:hover{
+    opacity: 0.85;
+}
+
+.titulo-disco{
+    text-align: center;
+}
+
+.titulo-disco h1{
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.texto-disco{
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+.video-disco{
+    width: 400px;
+    height: 225px;
+}
+
+.contenedor-1-disco{
+
+}
+
+.contenedor-2-disco{
+
+}
+
+.tarjeta-disco{
+    display: flex;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
 
 /**************** DISEÑO RESPONSIVO *****************/
 

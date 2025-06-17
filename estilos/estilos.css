@@ -293,10 +293,10 @@ body{
     border-radius: 10px;
     color: var(--color-negro);
     padding: 10px;
+    margin-top: auto;
     font-weight: 700;
     text-decoration: none;
     align-self: flex-end;
-    margin-top: 6rem;
     transition: opacity 0.3s ease;
 }
 
@@ -327,6 +327,7 @@ body{
     max-width: 410px;
     min-width: 250px;
     height: auto;
+    max-height: 230px;
     border-radius: 10px;
 }
 
@@ -354,7 +355,7 @@ body{
 }
 
 .tarjeta-disco img {
-    width: 100%;
+    width: auto;
     max-width: 200px;
     height: auto;
     object-fit: contain;
@@ -381,10 +382,10 @@ body{
 }
 
 .informacion-disco ul li img {
-     height: 25px;
+    height: 25px;
     width: 25px;
     margin-right: 8px;
-     object-fit: contain;
+    object-fit: contain;
 }
 
 /**************** DISEÑO RESPONSIVO *****************/

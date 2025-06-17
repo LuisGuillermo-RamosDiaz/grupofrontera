@@ -139,7 +139,6 @@ body{
 
 .contenedor-2-index{
     display: flex;
-    padding: 0.75rem;
 }
 
 .contenedor-3-index{
@@ -320,26 +319,72 @@ body{
 
 .texto-disco{
     text-align: justify;
-    padding: 0 1rem;
+    padding: 0 3vw;
 }
 
-.video-disco{
-    width: 400px;
-    height: 225px;
+.contenedor-2-disco video{
+    width: 45vw;
+    max-width: 410px;
+    min-width: 250px;
+    height: auto;
+    border-radius: 10px;
 }
 
 .contenedor-1-disco{
-
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    gap: 1rem;
 }
 
 .contenedor-2-disco{
-
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
 }
 
-.tarjeta-disco{
-    display: flex;
+.tarjeta-disco {
+    display: inline-flex;
     background-color: var(--color-principal);
     color: var(--color-blanco);
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.tarjeta-disco img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.informacion-disco{
+    display: flex;
+    flex-direction: column;
+}
+
+.informacion-disco ul {
+    list-style: none;
+     padding: 0;
+     margin: 0;
+}
+
+.informacion-disco ul li {
+    display: flex;
+     align-items: center;
+}
+
+.informacion-disco ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.informacion-disco ul li img {
+     height: 25px;
+    width: 25px;
+    margin-right: 8px;
+     object-fit: contain;
 }
 
 /**************** DISEÑO RESPONSIVO *****************/
@@ -408,4 +453,8 @@ body{
     .wrapper-index{
         margin-left: 0;
     }
+
+    /*.tarjeta-disco {
+        flex-wrap: wrap;
+    }*/
 }

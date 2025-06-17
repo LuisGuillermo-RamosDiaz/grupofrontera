@@ -273,7 +273,7 @@ body{
 
 }
 
-.division-discografia {
+.division-discografia{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -456,6 +456,14 @@ body{
 
     .wrapper-index{
         margin-left: 0;
+    }
+
+    .division-discografia h2, p{
+        font-size: 1rem;
+    }
+
+    .division-discografia a{
+        font-size: 0.8rem;
     }
 
     .contenedor-1-disco{

@@ -17,7 +17,7 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    /*outline: 1px solid red;*/
+    /**/outline: 1px solid red;/**/
 }
 
 body{
@@ -126,7 +126,7 @@ body{
 }
 
 .imagen-2-index{
-    max-height: 300px;
+    max-height: auto;
     max-width: 30%;
     outline: 3px solid var(--color-blanco);
 }
@@ -431,6 +431,10 @@ body{
         font-size: 2rem;
     }
 
+    .titulo-disco h1{
+        font-size: 1.5rem;
+    }
+
     .contenedor-3-index{
         display: flex;
         flex-direction: column;
@@ -448,11 +452,11 @@ body{
     }
 
     .imagen-2-index{
-        display: block; /*No puedo usar flex aqui pq el container que lo contiene esta en block*/
-        margin-left: auto;
-        margin-right: auto;
+        display: block;
         margin: 0 auto 1rem auto;
-        max-width: 35%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
     }
 
     .wrapper-index{

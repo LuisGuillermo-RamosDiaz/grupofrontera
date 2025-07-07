@@ -1,0 +1,117 @@
+.tarjetas-discografia{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.contenedor-discografia{
+    border-radius: 15px;
+    width: 25em;
+    height: auto;
+    background-color: var(--color-principal);
+    max-width: 800px;
+    padding: 1rem;
+}
+
+.imagen-discografia{
+    min-width: 50%;
+    background-color: var(--color-principal);
+}
+
+.caja-discografia{
+    display: flex;
+
+}
+
+.division-discografia{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0.8rem;
+}
+
+.division-discografia h2{
+    color: var(--color-blanco);
+    font-size: 1.25rem;
+}
+
+.division-discografia p{
+    color: var(--color-blanco);
+    font-weight: 350;
+}
+
+.division-discografia a{
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    color: var(--color-negro);
+    padding: 10px;
+    margin-top: auto;
+    font-weight: 700;
+    text-decoration: none;
+    align-self: flex-end;
+    transition: opacity 0.3s ease;
+}
+
+.division-discografia a:hover{
+    opacity: 0.85;
+}
+
+@media only screen and (max-width: 768px){
+    .menu{
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .barra-navegacion{
+        position: relative;
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--color-principal);
+    }
+
+    .menu .barra-navegacion ul li{
+        width: 100%;
+        padding: 0 0;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .texto-index{
+        font-size: 0.8rem;
+    }
+    #menu:checked + label + .barra-navegacion {
+      display: flex;
+    }
+}
+
+
+/************************************/
+/***   DISEÑO PARA MOVILES 480    ***/
+/************************************/
+
+@media only screen and (max-width: 480px){
+    .titulo, .subtitulo-2{
+        font-size: 2rem;
+    }
+
+    .titulo-disco h1{
+        font-size: 1.5rem;
+    }
+
+
+
+    .division-discografia h2, p{
+        font-size: 1rem;
+    }
+
+    .division-discografia a{
+        font-size: 0.8rem;
+    }
+}

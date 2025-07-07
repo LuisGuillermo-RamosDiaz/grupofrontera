@@ -1,0 +1,165 @@
+/*Los videos se tuvieron que colocar descargados en el mismo proyecto 
+debido a que youtube no permitia embed por el copyright de las canciones*/
+.titulo-disco{
+    text-align: center;
+}
+
+.titulo-disco h1{
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.ruta-navegacion {
+    list-style: none;
+    padding: 3vw 3vw 0 3vw;
+    display: flex;
+}
+
+.ruta-navegacion li::after {
+    content: ">";
+    margin: 0 10px;
+}
+
+.ruta-navegacion li:last-child::after {
+    content: "";
+}
+
+.ruta-navegacion li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.ruta-navegacion li a:hover{
+    text-decoration: underline;
+}
+
+.texto-disco{
+    text-align: justify;
+    padding: 0 3vw;
+}
+
+.contenedor-1-disco{
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    gap: 1rem;
+}
+
+.contenedor-2-disco{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+
+.contenedor-2-disco video{
+    width: 45vw;
+    max-width: 410px;
+    min-width: 250px;
+    height: auto;
+    max-height: 230px;
+    border-radius: 10px;
+}
+
+.tarjeta-disco{
+    display: inline-flex;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.tarjeta-disco img{
+    width: auto;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.informacion-disco{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.informacion-disco ul li{
+    display: flex;
+    align-items: center;
+}
+
+.informacion-disco ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.informacion-disco ul li img{
+    height: 25px;
+    width: 25px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+
+
+/************************************/
+/***   DISEÑO PARA TABLETAS 768   ***/
+/************************************/
+
+@media only screen and (max-width: 768px){
+    .contenedor-2-disco{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-2-disco video{
+        margin: 0 auto;
+    }
+
+    .contenedor-2-disco video{
+        width: 80vw;
+        
+    }
+}
+
+
+/************************************/
+/***   DISEÑO PARA MOVILES 480    ***/
+/************************************/
+
+@media only screen and (max-width: 480px){
+        .contenedor-1-disco{
+        gap: 5rem;
+        align-items: center;
+    }
+
+    .contenedor-2-disco{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+    } 
+
+    .contenedor-2-disco video{
+        width: 100%;
+        min-width: 250px;
+        height: auto;
+        max-height: 230px;
+        border-radius: 10px;
+    }
+    
+    .tarjeta-disco{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tarjeta-disco > img{
+        flex: 0 1 auto;
+        max-width: 260px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fuentes/montserrat.ttf);
+}
+
+:root {
+    --font: 'Montserrat', sans-serif;
+    --color-principal: #4C0017;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #FFFFFF;
+    color: var(--color-negro);
+    font-family: var(--font);
+    padding-top: 70px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.contenedor-menu{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back{
+    padding: 0;
+    background-color: var(--color-principal);
+}
+
+.menu{
+    position: fixed; /*Deja fijo el menu pero no oculta informacion detras de el*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: var(--color-principal);
+}
+
+.logo{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu .barra-navegacion ul li{
+    position: relative;
+    float: left;
+    margin-left: 5px;
+}
+
+.menu .barra-navegacion ul li:first-child{
+    margin-left: 0;
+}
+
+.menu .barra-navegacion ul li a{
+    font-size: 16px;
+    text-align: left;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    display: block;
+    transition: background-color 0.4s ease;
+    border-radius: 5px;
+}
+
+.menu .barra-navegacion ul li a:hover{
+    background-color: var(--color-blanco);
+    color: var(--color-principal);
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin: 1rem 0;
+}
+
+.subtitulo-2{
+    color: var(--color-negro);
+    font-weight: 700;
+    text-align: center;
+    margin: 1.5rem;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
+
+/************************************/
+/***   DISEÑO PARA TABLETAS 768   ***/
+/************************************/
+
+@media only screen and (max-width: 768px){
+    .menu{
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .barra-navegacion{
+        position: relative;
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--color-principal);
+    }
+
+    .menu .barra-navegacion ul li{
+        width: 100%;
+        padding: 0 0;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .texto-index{
+        font-size: 0.8rem;
+    }
+    #menu:checked + label + .barra-navegacion {
+      display: flex;
+    }
+}
+
+
+/************************************/
+/***   DISEÑO PARA MOVILES 480    ***/
+/************************************/
+
+@media only screen and (max-width: 480px){
+    .titulo, .subtitulo-2{
+        font-size: 2rem;
+    }
+
+    .titulo-disco h1{
+        font-size: 1.5rem;
+    }
+
+
+
+    .division-discografia h2, p{
+        font-size: 1rem;
+    }
+
+    .division-discografia a{
+        font-size: 0.8rem;
+    }
+}

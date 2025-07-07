@@ -1,0 +1,131 @@
+.imagen-1-index{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.imagen-2-index{
+    max-width: 320px;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    outline: 3px solid var(--color-blanco);
+}
+
+.contenedor-1-index{
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 3rem 2rem;
+}
+
+.contenedor-2-index{
+    display: flex;
+}
+
+.contenedor-3-index{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.contenedor-4-index{
+    display: flex;
+    justify-content: right;
+    padding: 0.5rem 3rem 0.5rem 0;
+    gap: 1.5rem;
+    background-color: var(--color-principal);
+}
+
+.contenedor-4-index img{
+    height: 50px;
+    transition: transform 0.2s;
+}
+
+.contenedor-4-index img:hover{
+    transform: scale(0.8);
+}
+
+.wrapper-index{
+     width: auto;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     margin-left: 20px;
+}
+
+.texto-index{
+    font-weight: 300;
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+.contenedor-3-index a{
+    display: inline-block;
+    padding: 5px;
+    height: 80px;
+    line-height: 70px;
+    width: 220px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: var(--color-principal);
+    box-shadow: 0 0.25rem 0.5rem var(--color-negro);
+    transition: transform 0.2s;
+}
+
+.contenedor-3-index a:hover{
+    transform: translateX(10px);
+}
+
+.contenedor-3-index a img{
+    height: 50px;
+    vertical-align: middle;
+    width: 175px;
+}
+
+/************************************/
+/***   DISEÑO PARA TABLETAS 768   ***/
+/************************************/
+
+@media only screen and (max-width: 768px){
+    
+}
+
+
+/************************************/
+/***   DISEÑO PARA MOVILES 480    ***/
+/************************************/
+
+@media only screen and (max-width: 480px){
+    .contenedor-3-index{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-4-index{
+        padding-right: 2rem;
+        gap: 0.5rem;
+    }
+
+    .contenedor-2-index{
+        display: block;
+        padding: 0;
+    }
+
+    .imagen-2-index{
+        display: block;
+        margin: 0 auto 1rem auto;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .wrapper-index{
+        margin-left: 0;
+    }
+}

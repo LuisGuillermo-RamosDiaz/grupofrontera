@@ -1,11 +1,34 @@
-.imagen-1-index{
+body{
+    background-color: var(--color-principal);
+}
+
+.fotografia-inicio{
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
 }
 
-.imagen-2-index{
+.seccion-portada {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.seccion-portada h1 {
+    font-family: 'Stickypops';
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.contenido-seccion img{
     max-width: 320px;
     max-height: 320px;
     object-fit: cover;
@@ -13,43 +36,17 @@
     outline: 3px solid var(--color-blanco);
 }
 
-.contenedor-1-index{
+.seccion-principal{
     background-color: var(--color-principal);
     color: var(--color-blanco);
     padding: 3rem 2rem;
 }
 
-.contenedor-2-index{
+.contenido-seccion{
     display: flex;
 }
 
-.contenedor-3-index{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin: 1.5rem;
-    margin-bottom: 3rem;
-}
-
-.contenedor-4-index{
-    display: flex;
-    justify-content: right;
-    padding: 0.5rem 3rem 0.5rem 0;
-    gap: 1.5rem;
-    background-color: var(--color-principal);
-}
-
-.contenedor-4-index img{
-    height: 50px;
-    transition: transform 0.2s;
-}
-
-.contenedor-4-index img:hover{
-    transform: scale(0.8);
-}
-
-.wrapper-index{
+.parrafo-descripcion{
      width: auto;
      display: flex;
      flex-direction: column;
@@ -57,42 +54,76 @@
      margin-left: 20px;
 }
 
-.texto-index{
+.parrafo-descripcion p{
     font-weight: 300;
     font-size: 18px;
     text-align: justify;
     letter-spacing: 0.5px;
 }
 
-.contenedor-3-index a{
-    display: inline-block;
+.plataformas-musica{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.plataformas-musica a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5px;
-    height: 80px;
-    line-height: 70px;
-    width: 220px;
+    height: 60px;
+    width: 180px;
     border-radius: 15px;
     text-align: center;
     background-color: var(--color-principal);
-    box-shadow: 0 0.25rem 0.5rem var(--color-negro);
+    box-shadow: 0 0.25rem 1rem var(--color-negro);
     transition: transform 0.2s;
 }
 
-.contenedor-3-index a:hover{
-    transform: translateX(10px);
+.plataformas-musica a:hover{
+    transform: translateY(-10px);
 }
 
-.contenedor-3-index a img{
-    height: 50px;
+.plataformas-musica a img{
+    height: 35px;
     vertical-align: middle;
-    width: 175px;
+    width: 120px;
 }
+
+
 
 /************************************/
 /***   DISEÑO PARA TABLETAS 768   ***/
 /************************************/
 
 @media only screen and (max-width: 768px){
-    
+    .seccion-portada h1 {
+        font-size: 28px;
+        top: 10%;
+    }
+
+    .parrafo-descripcion p{
+        font-weight: 300;
+        font-size: 14px;
+        text-align: justify;
+        letter-spacing: 0.5px;
+    }
+
+    .contenido-seccion{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenido-seccion img{
+        width: 280px;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -101,31 +132,26 @@
 /************************************/
 
 @media only screen and (max-width: 480px){
-    .contenedor-3-index{
+    .seccion-portada h1 {
+        font-size: 20px;
+        top: 10%;
+    }
+
+    .parrafo-descripcion{
+        margin-left: 0;
+    }
+
+    .plataformas-musica{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .contenedor-4-index{
-        padding-right: 2rem;
-        gap: 0.5rem;
+    .plataformas-musica a:hover{
+        transform: translateX(10px);
     }
 
-    .contenedor-2-index{
-        display: block;
-        padding: 0;
-    }
-
-    .imagen-2-index{
-        display: block;
-        margin: 0 auto 1rem auto;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .wrapper-index{
-        margin-left: 0;
+    .contenido-seccion img{
+        width: 200px;
     }
 }

@@ -1,11 +1,18 @@
 @font-face {
-  font-family: 'Montserrat';
-  src: url(../fuentes/montserrat.ttf);
+    font-family: 'Montserrat';
+    src: url(../fuentes/montserrat.ttf);
+}
+
+@font-face {
+    font-family: 'Stickypops';
+    src: url(../fuentes/stickypops.otf);
 }
 
 :root {
-    --font: 'Montserrat', sans-serif;
+    --font-stickypops: 'Stickypops', sans-serif;
+    --font-monserrat: 'Montserrat', sans-serif;
     --color-principal: #4C0017;
+    --color-secundario: #2a0015;
     --color-blanco: #FFFFFF;
     --color-negro: #000000;
 }
@@ -20,12 +27,23 @@
 }
 
 body{
-    background: #FFFFFF;
-    color: var(--color-negro);
-    font-family: var(--font);
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    font-family: var(--font-monserrat);
     padding-top: 70px;
     margin: 0;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1{
+    font-family: var(--font-stickypops);
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 5px;
 }
 
 .contenedor-menu{
@@ -39,7 +57,7 @@ body{
 }
 
 .menu{
-    position: fixed; /*Deja fijo el menu pero no oculta informacion detras de el*/
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -74,7 +92,7 @@ body{
     font-size: 16px;
     text-align: left;
     padding: 10px 15px;
-    color: #FFFFFF;
+    color: var(--color-blanco);
     display: block;
     transition: background-color 0.4s ease;
     border-radius: 5px;
@@ -105,13 +123,30 @@ body{
     margin: 1rem 0;
 }
 
-.subtitulo-2{
-    color: var(--color-negro);
-    font-weight: 700;
-    text-align: center;
-    margin: 1.5rem;
-    margin-top: 3rem;
-    font-size: 2.5rem;
+.redes-sociales {
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    background-color: var(--color-negro);
+}
+
+.redes-sociales p {
+    color: var(--color-blanco);
+    align-items: flex-start;
+    margin-right: auto;
+    padding: 0.5rem;
+    font-style: italic;
+}
+
+.redes-sociales img{
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+.redes-sociales img:hover{
+    transform: scale(0.8);
 }
 
 /************************************/
@@ -144,10 +179,22 @@ body{
     }
 
     .texto-index{
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
+
     #menu:checked + label + .barra-navegacion {
-      display: flex;
+        display: flex;
+    }
+
+    .redes-sociales{
+        justify-content: flex-end;
+        padding-right: 2rem;
+        font-size: 0.8rem;
+        gap: 0.8rem;
+    }
+
+    .redes-sociales img{
+        height: 35px;
     }
 }
 
@@ -157,21 +204,19 @@ body{
 /************************************/
 
 @media only screen and (max-width: 480px){
-    .titulo, .subtitulo-2{
+    .titulo{
         font-size: 2rem;
     }
 
-    .titulo-disco h1{
-        font-size: 1.5rem;
+    .redes-sociales{
+        padding-right: 2rem;
+        gap: 0.5rem;
     }
 
-
-
-    .division-discografia h2, p{
-        font-size: 1rem;
+    .redes-sociales img{
+        height: 30px;
     }
-
-    .division-discografia a{
-        font-size: 0.8rem;
+    .redes-sociales p{
+        font-size: 0.65rem;
     }
 }

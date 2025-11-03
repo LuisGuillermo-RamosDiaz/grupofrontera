@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector('label[for="menu"] img');
 
   const menuSrc = "imagenes/menu.png";   // icono hamburguesa
-  const closeSrc = "imagenes/menu-x.png"; // icono X
+  const closeSrc = "imagenes/menu-cerrado.png"; // icono X
 
   function toggleIcon() {
     if (menuCheckbox.checked) {

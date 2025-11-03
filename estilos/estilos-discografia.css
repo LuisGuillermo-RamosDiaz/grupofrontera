@@ -1,4 +1,4 @@
-.tarjetas-discografia{
+.tarjetas-discograficas{
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -6,43 +6,42 @@
     justify-content: center;
 }
 
-.contenedor-discografia{
+.contenido-disco{
     border-radius: 15px;
     width: 25em;
     height: auto;
     background-color: var(--color-principal);
+    outline: 1px solid var(--color-blanco);
     max-width: 800px;
     padding: 1rem;
-}
-
-.imagen-discografia{
-    min-width: 50%;
-    background-color: var(--color-principal);
-}
-
-.caja-discografia{
     display: flex;
-
+    flex-direction: row;
 }
 
-.division-discografia{
+.contenido-disco img{
+    min-width: 50%;
+}
+
+.contenido-disco div{
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-left: 0.8rem;
 }
 
-.division-discografia h2{
+.contenido-disco div h2{
     color: var(--color-blanco);
     font-size: 1.25rem;
+    font-weight: 700;
 }
 
-.division-discografia p{
+.contenido-disco div p{
     color: var(--color-blanco);
     font-weight: 350;
+    font-size: 1rem;
 }
 
-.division-discografia a{
+.contenido-disco div a{
     background-color: var(--color-blanco);
     border-radius: 10px;
     color: var(--color-negro);
@@ -54,40 +53,21 @@
     transition: opacity 0.3s ease;
 }
 
-.division-discografia a:hover{
+.contenido-disco div a:hover{
     opacity: 0.85;
 }
 
+/************************************/
+/***   DISEÑO PARA TABLETAS 768   ***/
+/************************************/
+
 @media only screen and (max-width: 768px){
-    .menu{
-        padding: 10px 20px;
-        flex-wrap: wrap;
+    .contenido-disco div p{
+        font-size: 0.9rem;
     }
 
-    .menu label{
-        display: initial;
-    }
-
-    .menu .barra-navegacion{
-        position: relative;
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background-color: var(--color-principal);
-    }
-
-    .menu .barra-navegacion ul li{
-        width: 100%;
-        padding: 0 0;
-        margin-top: 10px;
-        margin-left: 0;
-    }
-
-    .texto-index{
-        font-size: 0.8rem;
-    }
-    #menu:checked + label + .barra-navegacion {
-      display: flex;
+    .contenido-disco div a{
+        font-size: 0.9rem;
     }
 }
 
@@ -97,21 +77,20 @@
 /************************************/
 
 @media only screen and (max-width: 480px){
-    .titulo, .subtitulo-2{
-        font-size: 2rem;
+    .tarjetas-discograficas{
+        flex-direction: column;
     }
 
-    .titulo-disco h1{
-        font-size: 1.5rem;
+    .contenido-disco{
+        width: 300px;
+        margin: 0 auto;
     }
 
-
-
-    .division-discografia h2, p{
-        font-size: 1rem;
+    .contenido-disco > div > h2, .contenido-disco > div > p{
+        font-size: 0.9rem;
     }
 
-    .division-discografia a{
-        font-size: 0.8rem;
-    }
+    .contenido-disco div a{
+        font-size: 0.70rem;
+    }    
 }
